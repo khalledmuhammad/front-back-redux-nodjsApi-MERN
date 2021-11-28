@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    background: linear-gradient(146deg, #336b87, #90afc5);
+
+}
+
+.leftNav {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.leftNav,
+.middle,
+.rightNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightNav {
+    flex: 3;
+}
+
+.leftNav h1 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+
+}
+
+.rightNav img {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.rightNav img:hover {
+    transform: translateY(-5px) scale(1.2);
+
+    transition: transform 200ms ease-out;
+}
+
+.middle {
+    flex: 6;
+}
+
+.middle a {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.middle a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.middle a:hover,
+.middle a:active,
+.middle a.active {
+    background: #336b87;
+    transform: translateY(-5px) scale(1.2);
+
+    transition: transform 200ms ease-out;
+}
+
+@media only screen and (max-width : 991px) {
+    .leftNav {
+
+        flex: 1;
+
+    }
+
+    .rightNav {
+        flex-direction: row;
+        position: absolute;
+        right: 60px;
+        top: 13px;
+
+
+    }
+
+    .middle {
+        flex-direction: column;
+        position: absolute;
+
+        right: 0;
+        background-color: #90afc5;
+        margin-top: 10px;
+
+    }
+
+    .middle a {
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (max-width : 760px) {
+    .rightNav {
+        display: none;
+    }
+
+    .middle {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        background-color: #90afc5;
+        margin-top: 10px;
+
+
+    }
+
+    .middle a {
+        font-size: 1.5em;
+    }
+
+}
