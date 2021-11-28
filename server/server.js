@@ -10,7 +10,6 @@ const express = require("express")
 
  const app = express()
  const userRouter = require('./Routes/api/user-routes.js');
- const articleRouter = require("./Routes/api/Articles-routes")
 
 
 
@@ -35,7 +34,6 @@ app.use(ValidateToken);
 
 
 app.use("/api/users",userRouter)
-app.use("/api/articles" , articleRouter)
 
 app.get("/"  ,(req,res)=>{
     console.log(req.user)
